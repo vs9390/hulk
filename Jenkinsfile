@@ -1,9 +1,11 @@
 pipeline {
-    agent { docker { image 'golang:stretch' } }
+    agent {
+                docker { image 'golang:stretch' }
+           }
     stages {
         stage('build') {
             steps {
-                sh 'go --help'
+                sh 'go'
             }
         }
     }
